@@ -1,0 +1,19 @@
+.teacher-login-btn {
+  background-color: #1e3a8a; /* Dark blue */
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 0.5px;
+}
+
+.teacher-login-btn:hover {
+  background-color: #2563eb; /* Brighter blue */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

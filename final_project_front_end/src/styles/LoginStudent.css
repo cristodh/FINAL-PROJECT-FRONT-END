@@ -1,0 +1,25 @@
+.columns{
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+}
+
+.leftColumn{
+    display: grid;
+    text-align: center;
+    align-items: center;
+}
+
+.rightColumn{
+    display: flex;
+    height: 100vh;
+}
+
+.loginBackground{
+    background-image: url('../images/LoginBackground.png');
+    background-size: cover;   
+    background-position: center;
+    border-bottom-left-radius: 230px;
+    width: 100%;
+    background-position-y: 0px;
+    height: 100%;
+}

@@ -1,0 +1,107 @@
+.registerContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  height: 100vh;
+  width: 100%;
+}
+
+.registerLeft {
+  grid-column-start: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+/*Form*/
+.registerForm {
+  background: white;
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 750px;
+
+  /* 🔥 aquí está la clave */
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* dos columnas */
+  gap: 1.2rem 2rem; /* espacio entre filas y columnas */
+}
+
+.formTitle {
+  grid-column: span 2; /* título ocupa toda la fila */
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.formGroup label {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 6px;
+  background: #f0f0f0;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+textarea {
+  min-height: 80px;
+  resize: none;
+  grid-column: span 2; /* textarea siempre ocupa ambas columnas */
+}
+
+.formButtonContainer {
+  grid-column: span 2; /* botón ocupa ambas columnas */
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.formButton {
+  background-color: #1a3d8f; /* azul */
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease;
+}
+
+.formButton:hover {
+  background-color: #0f2963;
+}
+
+/* 🔥 Responsividad */
+@media (max-width: 768px) {
+  .registerContainer {
+    grid-template-columns: 1fr; /* solo formulario */
+  }
+
+  .registerLeft {
+    display: none; /* oculta la imagen */
+  }
+
+  .registerForm {
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+  }
+
+  textarea,
+  .formButtonContainer {
+    grid-column: span 1;
+  }
+}

@@ -1,11 +1,11 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
-import Login_Form from './components/Login_Form.jsx'
+import './Global.css'
+import Login_Form from './components/LoginForm.jsx'
+import Routing from './routes/Routing.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Login_Form/>
+    <Routing/>
   </StrictMode>,
 )

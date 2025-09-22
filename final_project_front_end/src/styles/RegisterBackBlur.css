@@ -1,0 +1,7 @@
+.RegisterBackBlur {
+  background-image: url(../images/registerBackBlur.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
