@@ -1,23 +1,23 @@
 import React from "react";
 import RegisterFormStu from "../components/RegisterFormStu";
 import "../styles/RegisterStudent.css";
-import RegisterBackBlur from "../components/RegisterBackBlur";
+import RegisterBack from "../components/RegisterBack";
 
-function RegisterPage() {
+function RegisterStudent() {
   return (
 
-     <div>
-      <RegisterBackBlur/>
-    <div className="registerContainer">
-      <div className="registerLeft">
+    <div>
+      <RegisterBack/>
+      <div className="registerContainer">
+        <div className="registerLeft">
         
+        </div>
+        <div className="registerRight">
+          <RegisterFormStu />
+        </div>
       </div>
-      <div className="registerRight">
-        <RegisterFormStu />
-      </div>
-    </div>
     </div>
   );
 }
 
-export default RegisterPage;
+export default RegisterStudent;

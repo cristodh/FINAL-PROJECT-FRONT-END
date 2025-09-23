@@ -3,6 +3,7 @@ import LoginStudent from "../pages/LoginStudent";
 import LoginProfessor from "../pages/LoginProfessor";
 import RegisterStudent from "../pages/RegisterStudent";
 
+
 function Routing() {
     return(
         <Router>
