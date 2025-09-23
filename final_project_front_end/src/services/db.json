@@ -1,7 +1,33 @@
 {
-    "students": [],
-    "teachers": [],
-    "admins":[],
-    "cpu": [],
-    "cpurequests": []
+  "students": [
+    {
+      "id": "0",
+      "email": "",
+      "password": "123",
+      "registerState": "pendingForAprv",
+      "name": "Christopher",
+      "lastName": "Delgado Hidalgo",
+      "province": "San Jose",
+      "canton": "Tibas",
+      "distrit": "Colima",
+      "address": "Por ahi",
+      "confirmPassword": "123",
+      "studentID": "11885",
+      "phone": "911",
+      "dob": "1970-10-20",
+      "gender": "Macho",
+      "location": "La Capri",
+      "startDate": "2025"
+    },
+    {
+      "id": "2",
+      "email": "chris@hotmail.com",
+      "password": "1234",
+      "registerState": "no completed"
+    }
+  ],
+  "teachers": [],
+  "admins": [],
+  "cpu": [],
+  "cpurequests": []
 }
