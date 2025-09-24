@@ -3,6 +3,7 @@ import LoginStudent from "../pages/LoginStudent";
 import LoginProfessor from "../pages/LoginProfessor";
 import RegisterStudent from "../pages/RegisterStudent";
 import Admin from "../pages/Admin";
+import CreateModifyAdmin from "../pages/CreateModifyAdmin";
 
 
 function Routing() {
@@ -11,8 +12,9 @@ function Routing() {
             <Routes>
                 <Route path="/" element={<LoginStudent/>}/>
                 <Route path="/professor" element={<LoginProfessor/>}/>
-                <Route path="/regis_stu" element={<RegisterStudent/>}/>
-                <Route path="/admin" element={<Admin/>}/>
+                <Route path="/registerNewStudent" element={<RegisterStudent/>}/>
+                <Route path="/admin_home" element={<Admin/>}/>
+                <Route path="/create_modif_admin" element={<CreateModifyAdmin/>}/>
             </Routes>
         </Router>
     )

@@ -24,9 +24,75 @@
       "email": "chris@hotmail.com",
       "password": "1234",
       "registerState": "no completed"
+    },
+    {
+      "id": "708e",
+      "email": "soymaistro@mepxd.com",
+      "tempPassword": "1234"
+    },
+    {
+      "id": "c765",
+      "email": "juanito@gmail.com",
+      "tempPassword": "123414213213124"
+    },
+    {
+      "id": "1051",
+      "email": "sanchez@gmail.com",
+      "tempPassword": "1234"
+    },
+    {
+      "id": "807e",
+      "email": "correo@gmail.com",
+      "tempPassword": "1234"
+    },
+    {
+      "id": "6fd6",
+      "email": "sds",
+      "tempPassword": "dsdss"
+    },
+    {
+      "id": "2967",
+      "email": "ds",
+      "tempPassword": "dsds"
     }
   ],
-  "teachers": [],
+  "teachers": [
+    {
+      "id": "90d3",
+      "email": "soymaistro@mepxd.com",
+      "tempPassword": "1234"
+    },
+    {
+      "id": "9410",
+      "email": "Gg@gmail.com",
+      "tempPassword": "1234"
+    },
+    {
+      "id": "b0f2",
+      "email": "ds@gmail.com",
+      "tempPassword": "1234"
+    },
+    {
+      "id": "06c7",
+      "email": "12",
+      "tempPassword": "12"
+    },
+    {
+      "id": "50a0",
+      "email": "asdas",
+      "tempPassword": "asdas"
+    },
+    {
+      "id": "6b54",
+      "email": "dfkdlfkd",
+      "tempPassword": "dffdf"
+    },
+    {
+      "id": "1649",
+      "email": "sdsdsd",
+      "tempPassword": "asdsad"
+    }
+  ],
   "admins": [],
   "cpu": [],
   "cpurequests": []

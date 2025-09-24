@@ -1,10 +1,14 @@
 import React from 'react'
-import UpdateUserAdmin from '../components/UpdateUserAdmin'
+import AddUserAdmin from '../components/AddUserAdmin'
+import AdminSidebar from '../components/AdminSidebar'
 
 function CreateModifyAdmin() {
     return (
         <div>
-            <UpdateUserAdmin/>
+            <div>
+              
+            </div>
+           <AddUserAdmin/>
         </div>
     )
 }

@@ -85,6 +85,7 @@ function RegisterFormStu() {
               type="text"
               placeholder="Nombre"
               value={formData.nombre}
+              max={50}
               onChange={(e) =>
                 setFormData({ ...formData, nombre: e.target.value })
               }
@@ -96,6 +97,7 @@ function RegisterFormStu() {
             <input
               type="text"
               placeholder="Apellidos"
+              max={50}
               value={formData.apellidos}
               onChange={(e) =>
                 setFormData({ ...formData, apellidos: e.target.value })
@@ -109,6 +111,7 @@ function RegisterFormStu() {
           <input
             type="email"
             placeholder="Correo electrónico"
+            max={255}
             value={formData.email}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
