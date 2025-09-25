@@ -1,15 +1,15 @@
 import React from 'react'
 import LoginForm from '../components/LoginForm'
-import LoginBackgroud from '../components/LoginBackgroud'
+import StudentLoginBackgroud from '../components/StudentLoginBackgroud'
 function LoginStudent() {
   return (
     <div className='columns'>
-        <div className='leftColumn'>
-          <LoginForm/>
-          </div>
-        <div className='rightColumn'>
-          <LoginBackgroud/>
-          </div>
+      <div className='leftColumn'>
+        <LoginForm />
+      </div>
+      <div className='rightColumn'>
+        <StudentLoginBackgroud />
+      </div>
     </div>
   )
 }

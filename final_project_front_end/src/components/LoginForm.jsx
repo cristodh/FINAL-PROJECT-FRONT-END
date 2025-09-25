@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PersonIcon from '@mui/icons-material/Person';
-import '../styles/LoginForm.css'
+import '../styles/StudentLoginForm.css'
 import NoEncryptionGmailerrorredIcon from '@mui/icons-material/NoEncryptionGmailerrorred';
 import LockIcon from '@mui/icons-material/Lock';
 import { useNavigate } from 'react-router-dom';
@@ -70,10 +70,12 @@ function LoginForm() {
 
 
             </div>
-            <button onClick={verifyStudent}>Iniciar sesion</button>
-            <button className="teacher-login-btn" onClick={() => navigate('/professor')}>
+            <div><button className="button-account-student" role="button" onClick={verifyStudent}>INICIAR SESIÓN</button></div>
+            <div><button className="student-login-btn" onClick={() => navigate('/LoginProfessor')}>
                 INICIO DE SESIÓN COMO DOCENTE
             </button>
+            </div>
+            
 
         </div>
     )
