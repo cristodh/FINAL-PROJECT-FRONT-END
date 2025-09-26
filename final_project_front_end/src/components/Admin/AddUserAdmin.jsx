@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { postData } from '../services/fetchs'
+import { postData } from '../../services/fetchs'
 
 function AddUserAdmin() {
   const [selectedRol, setSelectedRol] = useState('')

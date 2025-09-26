@@ -1,5 +1,5 @@
 import React from "react";
-import { getData, patchData } from "../services/fetchs.js";
+import { getData, patchData } from "../../services/fetchs.js";
 import { useState } from "react";
 
 function RegisterFormStu() {

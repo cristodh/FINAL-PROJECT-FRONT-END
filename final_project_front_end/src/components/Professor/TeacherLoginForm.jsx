@@ -4,7 +4,7 @@ import '../styles/TeacherLoginForm.css'
 import NoEncryptionGmailerrorredIcon from '@mui/icons-material/NoEncryptionGmailerrorred';
 import LockIcon from '@mui/icons-material/Lock';
 import { useNavigate } from 'react-router-dom';
-import { getData } from '../services/fetchs';
+import { getData } from '../../services/fetchs';
 
 /*
     HACER ESTADOS PARA CADA UNO DE LOS INPUTS
