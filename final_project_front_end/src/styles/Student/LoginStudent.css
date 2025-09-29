@@ -4,9 +4,18 @@
 }
 
 .leftColumn{
-    display: grid;
+    justify-content: center;
     text-align: center;
-    align-items: center;
+    align-items: center; 
+}
+
+.loginFormStu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+    row-gap: 20px;
 }
 
 .rightColumn{
@@ -15,7 +24,7 @@
 }
 
 .loginBackground{
-    background-image: url('../images/LoginBackground.png');
+    background-image: url('../../images/Student/LoginBackground.png');
     background-size: cover;   
     background-position: center;
     border-bottom-left-radius: 230px;

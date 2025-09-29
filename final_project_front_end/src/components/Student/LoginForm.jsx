@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import PersonIcon from '@mui/icons-material/Person';
-import '../styles/StudentLoginForm.css'
+// import '../../styles/Student/StudentLoginForm.css'
 import NoEncryptionGmailerrorredIcon from '@mui/icons-material/NoEncryptionGmailerrorred';
 import LockIcon from '@mui/icons-material/Lock';
 import { useNavigate } from 'react-router-dom';
-import { getData } from '../services/fetchs';
+import { getData } from '../../services/fetchs';
 
 /*
     HACER ESTADOS PARA CADA UNO DE LOS INPUTS
@@ -36,10 +36,20 @@ function LoginForm() {
         const registerStudentFound = students.find(
             (students) => students.email === emailStudent &&
                 students.password === passwordStudent);
+        console.log(students.id);
+
+        if (newStudentFound) {
+            localStorage.setItem('estudianteNuevo', JSON.stringify(newStudentFound))
+            navigate("/registerNewStudent")
+            return
+        }
+        if (registerStudentFound) {
+            localStorage.setItem('estudianteRegistrado', JSON.stringify(registerStudentFound))
+            navigate("/student/home")
+            return
+        }
 
 
-        newStudentFound ? navigate("/registerNewStudent") : registerStudentFound ? navigate("/student_home") : alert("Usuario o contraseña incorrectos")   
-        
 
 
     }
@@ -47,7 +57,7 @@ function LoginForm() {
 
 
     return (
-        <div>
+        <div className='loginFormStu'>
             <h1 className='loginTitle'> Entrá, descubrí y formá parte de esta aventura</h1>
             <p className='loginSubtitle'>INGRESÁ TU CORREO Y CONTRASEÑA</p>
             <div className='loginInputEmail'>
@@ -61,11 +71,6 @@ function LoginForm() {
                     togglePass()
                 }} />}
 
-                {/* El if ternario
-                condicion ? si_es_verdaderdo : se_es_falso
-                
-                Es un if else en la misma instrucción
-                */}
                 <input type={showPass === false ? "password" : "text"} onChange={(e) => setPasswordStudent(e.target.value)} />
 
 
@@ -75,10 +80,19 @@ function LoginForm() {
                 INICIO DE SESIÓN COMO DOCENTE
             </button>
             </div>
-            
+
 
         </div>
     )
 }
 
 export default LoginForm
+
+
+
+
+/* El if ternario
+condicion ? si_es_verdaderdo : si_es_falso
+
+Es un if else en la misma instrucción
+*/

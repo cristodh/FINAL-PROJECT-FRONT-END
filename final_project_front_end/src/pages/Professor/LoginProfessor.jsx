@@ -1,6 +1,6 @@
 import React from 'react'
-import TeacherLoginForm from '../components/TeacherLoginForm'
-import TeacherLoginBackgroud from '../components/TeacherLoginBackgroud'
+import TeacherLoginForm from '../../components/Professor/TeacherLoginForm'
+import TeacherLoginBackgroud from '../../components/Professor/TeacherLoginBackgroud'
 
 
 function LoginProfessor() {

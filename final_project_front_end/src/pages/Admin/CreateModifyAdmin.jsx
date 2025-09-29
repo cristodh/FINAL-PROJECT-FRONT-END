@@ -1,14 +1,32 @@
-import React from 'react'
-import AddUserAdmin from '../components/AddUserAdmin'
-import AdminSidebar from '../components/AdminSidebar'
-
+import { useEffect, useState } from 'react'
+import AddUserAdmin from '../../components/Admin/AddUserAdmin'
+import { getData } from '../../services/fetchs'
+import ListaEstudiantes from '../../components/Admin/ListaEstudiantes'
+import '../../styles/Admin/Admin.css'
 function CreateModifyAdmin() {
+    const [listaUsuarios, setListaUsuarios] = useState([])
+
+    useEffect(() => {
+        async function cargarUsuarios() {
+            const peticion = await getData("students")
+            setListaUsuarios(peticion)
+        }
+        cargarUsuarios()
+    }, [listaUsuarios])
+
     return (
         <div>
             <div>
-              
+
             </div>
-           <AddUserAdmin/>
+            <AddUserAdmin />
+            <div className='gridStudents'>
+                {listaUsuarios.map((usuario) => {
+                    return (
+                        <ListaEstudiantes key={usuario.id} email={usuario.email} estado={usuario.registerState === "pendingForAprv" ? "Pendiente de aprobacion" : usuario.registerState === "no completed" ? 'Sin completar' : usuario.registerState === "approved" ? "Aprobado" : "Sin estado"} id={usuario.id} />
+                    )
+                })}
+            </div>
         </div>
     )
 }

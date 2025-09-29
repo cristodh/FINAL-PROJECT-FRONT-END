@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/registerBackBlur.css"
+import "../../styles/Student/registerBackBlur.css"
 
 function RegisterBack() {
   return (

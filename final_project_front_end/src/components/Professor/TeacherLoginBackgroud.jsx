@@ -1,5 +1,5 @@
 import React from 'react'
-import '../styles/LoginTeacher.css'
+import '../../styles/Professor/LoginTeacher.css'
 
 function TeacherLoginBackgroud() {
   return (

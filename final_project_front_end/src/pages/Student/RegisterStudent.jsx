@@ -1,7 +1,7 @@
 import React from "react";
-import RegisterFormStu from "../components/RegisterFormStu";
-import "../styles/RegisterStudent.css";
-import RegisterBack from "../components/RegisterBack";
+import RegisterFormStu from "../../components/Student/RegisterFormStu";
+import "../../styles/Student/RegisterStudent.css";
+import RegisterBack from "../../components/Student/RegisterBack";
 
 function RegisterStudent() {
   return (

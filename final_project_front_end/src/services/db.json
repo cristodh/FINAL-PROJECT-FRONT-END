@@ -2,9 +2,9 @@
   "students": [
     {
       "id": "0",
-      "email": "",
+      "email": "chris",
       "password": "123",
-      "registerState": "pendingForAprv",
+      "registerState": "approved",
       "name": "Christopher",
       "lastName": "Delgado Hidalgo",
       "province": "San Jose",
@@ -23,37 +23,43 @@
       "id": "2",
       "email": "chris@hotmail.com",
       "password": "1234",
-      "registerState": "no completed"
+      "registerState": "pendingForAprv"
     },
     {
       "id": "708e",
       "email": "soymaistro@mepxd.com",
-      "tempPassword": "1234"
+      "tempPassword": "1234",
+      "registerState": ""
     },
     {
       "id": "c765",
       "email": "juanito@gmail.com",
-      "tempPassword": "123414213213124"
+      "tempPassword": "123414213213124",
+      "registerState": ""
     },
     {
       "id": "1051",
       "email": "sanchez@gmail.com",
-      "tempPassword": "1234"
+      "tempPassword": "1234",
+      "registerState": ""
     },
     {
       "id": "807e",
       "email": "correo@gmail.com",
-      "tempPassword": "1234"
+      "tempPassword": "1234",
+      "registerState": ""
     },
     {
       "id": "6fd6",
       "email": "sds",
-      "tempPassword": "dsdss"
+      "tempPassword": "dsdss",
+      "registerState": ""
     },
     {
       "id": "2967",
       "email": "ds",
-      "tempPassword": "dsds"
+      "tempPassword": "dsds",
+      "registerState": ""
     }
   ],
   "teachers": [

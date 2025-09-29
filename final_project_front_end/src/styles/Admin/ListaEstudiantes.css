@@ -1,0 +1,91 @@
+.studentCard{
+  display: grid;
+}
+
+
+.studentInfo {
+  background-color: #F2EFEA; /* Cloud Dancer */
+  border: 1px solid #8A817C; /* matiz oscuro */
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.studentInfo h4 {
+  margin-bottom: 0.5rem;
+  color: #463F3A; /* tono más fuerte */
+  font-size: 1.1rem;
+}
+
+.studentInfo p {
+  margin: 0.25rem 0;
+  color: #6D6875; /* matiz medio */
+  font-size: 0.95rem;
+}
+
+/* Select */
+.selection select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #8A817C;
+  border-radius: 8px;
+  background-color: #EDEDE9; /* un tono claro */
+  color: #463F3A;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.selection select:focus {
+  outline: none;
+  border-color: #6D6875;
+  box-shadow: 0 0 0 3px rgba(109, 104, 117, 0.2);
+  background-color: #fff;
+}
+
+.selection option[disabled] {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Botón */
+.btnChangeState {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6D6875; /* acento oscuro */
+  color: #F2EFEA; /* Cloud Dancer en texto */
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 10px;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btnChangeState:hover {
+  background-color: #463F3A;
+  transform: scale(1.03);
+}
+
+.btnChangeState:active {
+  background-color: #8A817C;
+  transform: scale(0.98);
+}
+.selectEstado{
+  border-radius: 20px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  margin: 0 auto;
+  display: block;
+  margin-top: 10px;
+}
+.centro{
+  text-align: center;
+}

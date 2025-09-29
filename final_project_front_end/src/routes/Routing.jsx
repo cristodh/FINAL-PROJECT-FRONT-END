@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Routes,Route, } from "react-router-dom";
-import LoginStudent from "../pages/LoginStudent";
-import LoginProfessor from "../pages/LoginProfessor";
-import RegisterStudent from "../pages/RegisterStudent";
-import Admin from "../pages/Admin";
-import CreateModifyAdmin from "../pages/CreateModifyAdmin";
-import AdminLogin from "../pages/AdminLogin";
+import LoginStudent from "../pages/Student/LoginStudent";
+import LoginProfessor from "../pages/Professor/LoginProfessor";
+import RegisterStudent from "../pages/Student/RegisterStudent";
+import Admin from "../pages/Admin/Admin";
+import CreateModifyAdmin from "../pages/Admin/CreateModifyAdmin";
+import AdminLogin from "../pages/Admin/AdminLogin";
+import CPUForm from "../pages/Student/CPUForm";
+import HomeStudent from "../pages/Student/HomeStudent";
 
 
 function Routing() {
@@ -17,6 +19,8 @@ function Routing() {
                 <Route path="/admin_home" element={<Admin/>}/>
                 <Route path="/create_modif_admin" element={<CreateModifyAdmin/>}/>
                 <Route path="/AdminLogin" element={<AdminLogin/>}/>
+                <Route path="/student/CPURequestForm" element={<CPUForm/>}/>
+                <Route path="/student/home" element={<HomeStudent/>}/>
             </Routes>
         </Router>
     )

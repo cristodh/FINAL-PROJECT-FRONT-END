@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import PersonIcon from '@mui/icons-material/Person';
-import '../styles/TeacherLoginForm.css'
+import '../../styles/Professor/TeacherLoginForm.css'
 import NoEncryptionGmailerrorredIcon from '@mui/icons-material/NoEncryptionGmailerrorred';
 import LockIcon from '@mui/icons-material/Lock';
 import { useNavigate } from 'react-router-dom';

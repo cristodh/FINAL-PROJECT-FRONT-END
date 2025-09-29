@@ -1,0 +1,13 @@
+:root {
+  --color-neon-navy: #131936;
+  --color-pageant-blue: #1F2C43;
+  --color-harbor-blue: #00656E;
+  --color-cloud-dancer: #F0EEE9;
+
+  /* Definimos roles */
+  --color-bg: var(--color-cloud-dancer);
+  --color-text: var(--color-neon-navy);
+  --color-surface: #ffffff; /* Fondo de tarjetas sobre el Cloud Dancer */
+  --color-border: var(--color-pageant-blue);
+  --color-accent: var(--color-harbor-blue);
+}
