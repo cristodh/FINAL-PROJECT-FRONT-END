@@ -1,13 +1,16 @@
 import React from "react";
 import { getData, patchData } from "../../services/fetchs.js";
 import { useState } from "react";
+import Toastify from 'toastify-js'
+import { useNavigate } from "react-router-dom";
 
 function RegisterFormStu() {
-
+  const navigate = useNavigate()
+  const [infoUsuario,setInfoUsuario] = useState(JSON.parse(localStorage.getItem('estudianteNuevo')) || [])
   const [formData, setFormData] = useState({
     nombre: "",
     apellidos: "",
-    email: "",
+    email: infoUsuario.email || "SIN CORREO",
     provincia: "",
     canton: "",
     distrito: "",
@@ -51,23 +54,24 @@ function RegisterFormStu() {
     }
     await patchData("students", studentObj, '0');
 
-    setFormData({
-      nombre: "",
-      apellidos: "",
-      email: "",
-      provincia: "",
-      canton: "",
-      distrito: "",
-      direccion: "",
-      password: "",
-      confirmPassword: "",
-      cedula: "",
-      telefono: "",
-      nacimiento: "",
-      genero: "",
-      sede: "",
-      inicio: ""
-    });
+    Toastify({
+  text: "Solicitud de nuevo estudiante enviada",
+  duration: 2000,
+  newWindow: true,
+  close: true,
+  gravity: "top", // `top` or `bottom`
+  position: "center", // `left`, `center` or `right`
+  stopOnFocus: true, // Prevents dismissing of toast on hover
+  style: {
+    background: "linear-gradient(to right, #00b09b, #96c93d)",
+  },
+  onClick: function(){} // Callback after click
+}).showToast();
+
+    localStorage.removeItem('estudianteNuevo')
+    setTimeout(() => {
+      navigate("/")
+    }, 2000);
   }
 
 

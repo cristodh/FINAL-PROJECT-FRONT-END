@@ -1,0 +1,96 @@
+/* Contenedor general */
+.contenedorGeneral {
+  background-color: #F2EFEA; /* Cloud Dancer */
+  border: 1px solid #8A817C;
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Título */
+.contenedorGeneral h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #463F3A; /* fuerte */
+  font-size: 1.5rem;
+}
+
+/* Info personal */
+.infoPersonal label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+  color: #6D6875;
+}
+
+.infoPersonal input {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #8A817C;
+  border-radius: 8px;
+  background-color: #EDEDE9;
+  font-size: 0.95rem;
+  color: #463F3A;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.infoPersonal input:focus {
+  outline: none;
+  border-color: #6D6875;
+  box-shadow: 0 0 0 3px rgba(109, 104, 117, 0.2);
+  background-color: #fff;
+}
+
+/* Link PDF */
+.linkPdf {
+  color: #6D6875;
+  text-decoration: underline;
+  cursor: pointer;
+  margin: 1rem 0;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.linkPdf:hover {
+  color: #463F3A;
+}
+
+/* Checkbox */
+.checkContenedor {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 0.5rem;
+}
+
+.checkContenedor label {
+  font-size: 0.95rem;
+  color: #463F3A;
+}
+
+/* Botón enviar */
+.infoPersonal button {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #6D6875;
+  color: #F2EFEA;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.infoPersonal button:hover {
+  background-color: #463F3A;
+  transform: scale(1.02);
+}
+
+.infoPersonal button:active {
+  background-color: #8A817C;
+  transform: scale(0.98);
+}

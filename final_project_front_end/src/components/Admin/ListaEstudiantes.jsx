@@ -37,13 +37,13 @@ const ListaEstudiantes = ({ email, estado, id }) => {
                 <p className='centro'>Correo: {email}</p>
                 <p className='centro'>Estado del estudiante: {estado}</p>
                 <select className='selectEstado' name="" id="" onChange={(e) => setEstadoSeleccionado(e.target.value)} >
-                    <option value="" disabled>Seleccione un nuevo estado</option>
+                    <option value="" disabled selected>Seleccione un nuevo estado</option>
                     <option value="approved">Aprobar</option>
                     <option value="no completed">No completo</option>
                     <option value="pendingForAprv">Pendiente de aprobacion</option>
                 </select>
                 <div>
-                 <button onClick={verModal}>Ver mas info</button>   
+                 <button className='btn btn-success text-white' onClick={verModal}>Ver mas info</button>   
             </div>
                     <button className='btnChangeState' onClick={() => cambiarEstado(id)}>Cambiar Estado</button>
                 </div>

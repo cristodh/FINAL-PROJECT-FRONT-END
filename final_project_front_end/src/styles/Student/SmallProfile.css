@@ -6,3 +6,11 @@
   text-align: center;
   color: var(--color-text);
 }
+.fotoPerfil{
+  img{
+    width: 90px;
+    object-fit: contain;
+    height: 90px;
+    border-radius: 50px;
+  }
+}

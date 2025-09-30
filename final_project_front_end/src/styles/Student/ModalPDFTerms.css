@@ -1,0 +1,48 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modalContent {
+  position: relative;
+  background: #F2EFEA; /* Cloud Dancer */
+  border-radius: 12px;
+  padding: 1rem;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #6D6875;
+  color: #F2EFEA;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.closeBtn:hover {
+  background: #463F3A;
+}
+
+.pdfViewer {
+  flex-grow: 1;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+}

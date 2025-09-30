@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { postData } from '../../services/fetchs'
+import "../../styles/Admin/AddUserAdmin.css"
 
 function AddUserAdmin() {
   const [selectedRol, setSelectedRol] = useState('')
@@ -38,27 +39,44 @@ function AddUserAdmin() {
   }
 
   return (
-    <div>
+    <div class="crearUsuario">
       <h2>Crear un usuario</h2>
-      <label>Selecciona una categoria: </label>
-      <select name="Categoria: " id="dbEndPoint" value={selectedRol} onChange={(e) => setSelectedRol(e.target.value)}>
+
+      <label for="dbEndPoint">Selecciona una categoría:</label>
+      <select
+        name="Categoria"
+        id="dbEndPoint"
+        value={selectedRol}
+        onChange={(e) => setSelectedRol(e.target.value)}
+      >
         <option value="" disabled selected>Seleccione la categoría</option>
         <option value="teachers">Profesor</option>
         <option value="students">Estudiante</option>
       </select>
 
       <div>
-        <label htmlFor="">Correo Electronico: </label>
-        <input type="text" placeholder='Correo Electronico' value={userEmail} onChange={(e) => setUserEmail(e.target.value)} />
+        <label>Correo Electrónico:</label>
+        <input
+          type="text"
+          placeholder="Correo Electrónico"
+          value={userEmail}
+          onChange={(e) => setUserEmail(e.target.value)}
+        />
       </div>
+
       <div>
-        <label htmlFor="">Contraseña Temporal: </label>
-        <input type="text" placeholder='Contraseña Temporal' value={userTempPass} onChange={(e) => setUserTempPass(e.target.value)} />
+        <label>Contraseña Temporal:</label>
+        <input
+          type="text"
+          placeholder="Contraseña Temporal"
+          value={userTempPass}
+          onChange={(e) => setUserTempPass(e.target.value)}
+        />
       </div>
+
       <button onClick={addUser}>Agregar</button>
-
-
     </div>
+
   )
 }
 

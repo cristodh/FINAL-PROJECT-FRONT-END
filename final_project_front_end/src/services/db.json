@@ -2,64 +2,23 @@
   "students": [
     {
       "id": "0",
-      "email": "chris",
+      "email": "cris2314",
       "password": "123",
-      "registerState": "approved",
+      "registerState": "pendingForAprv",
       "name": "Christopher",
       "lastName": "Delgado Hidalgo",
       "province": "San Jose",
       "canton": "Tibas",
       "distrit": "Colima",
-      "address": "Por ahi",
+      "address": "Urbanizacion Los Almendros, casa #99",
       "confirmPassword": "123",
-      "studentID": "11885",
-      "phone": "911",
-      "dob": "1970-10-20",
-      "gender": "Macho",
+      "studentID": "116540496",
+      "phone": "63007974",
+      "dob": "1996-09-29",
+      "gender": "Masculino",
       "location": "La Capri",
-      "startDate": "2025"
-    },
-    {
-      "id": "2",
-      "email": "chris@hotmail.com",
-      "password": "1234",
-      "registerState": "pendingForAprv"
-    },
-    {
-      "id": "708e",
-      "email": "soymaistro@mepxd.com",
-      "tempPassword": "1234",
-      "registerState": ""
-    },
-    {
-      "id": "c765",
-      "email": "juanito@gmail.com",
-      "tempPassword": "123414213213124",
-      "registerState": ""
-    },
-    {
-      "id": "1051",
-      "email": "sanchez@gmail.com",
-      "tempPassword": "1234",
-      "registerState": ""
-    },
-    {
-      "id": "807e",
-      "email": "correo@gmail.com",
-      "tempPassword": "1234",
-      "registerState": ""
-    },
-    {
-      "id": "6fd6",
-      "email": "sds",
-      "tempPassword": "dsdss",
-      "registerState": ""
-    },
-    {
-      "id": "2967",
-      "email": "ds",
-      "tempPassword": "dsds",
-      "registerState": ""
+      "startDate": "2025",
+      "CPU": "L1165404962025"
     }
   ],
   "teachers": [
@@ -101,5 +60,18 @@
   ],
   "admins": [],
   "cpu": [],
-  "cpurequests": []
+  "cpurequests": [
+    {
+      "id": "1144",
+      "Name": "Christopher Delgado Hidalgo",
+      "studentID": "116540496",
+      "email": "cris2314",
+      "location": "La Capri",
+      "CPU": "L1165404962025",
+      "startDate": "2025-09-30",
+      "endDate": "2025-10-01",
+      "termsAccepted": true,
+      "requestState": "pendingForAprv"
+    }
+  ]
 }
