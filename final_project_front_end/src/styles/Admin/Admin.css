@@ -1,5 +1,83 @@
-.gridStudents{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+/* === CONTENEDOR PRINCIPAL === */
+.adminContainer {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 1rem;
+  min-height: 100vh;
+  background: #f4f6f9;
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1rem;
+}
+
+/* === SIDEBAR === */
+.sidebarArea {
+  grid-row: 1 / 4;
+  background: rgba(19, 25, 54, 0.95);
+  color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* === FORMULARIO DE AGREGAR USUARIO === */
+.addUserArea {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === GRID DE ESTUDIANTES === */
+.gridStudents {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  max-height: 70vh;
+}
+
+/* === FORMULARIO DE SOLICITUD DE PC === */
+.addPcRequestArea {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* === ESTILO GENERAL DE TARJETAS === */
+.gridStudents > * {
+  background: #fdfdfd;
+  border-radius: 10px;
+  padding: 1rem;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gridStudents > *:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1024px) {
+  .adminContainer {
+    grid-template-columns: 200px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .adminContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+  }
+
+  .sidebarArea {
+    grid-row: auto;
+  }
 }

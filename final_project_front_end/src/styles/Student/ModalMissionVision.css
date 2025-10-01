@@ -1,0 +1,47 @@
+.mmv-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(31, 44, 67, 0.7); /* pageant blue con opacidad */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.mmv-modal {
+  background: var(--color-cloud-dancer);
+  border: 2px solid var(--color-pageant-blue);
+  border-radius: 16px;
+  padding: 2rem;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 8px 32px rgba(19, 25, 54, 0.2);
+  text-align: center;
+  position: relative;
+}
+.mmv-logo {
+  width: 120px;
+  margin-bottom: 1rem;
+}
+.mmv-title {
+  color: var(--color-harbor-blue);
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.mmv-text {
+  color: var(--color-neon-navy);
+  margin-bottom: 1rem;
+}
+.mmv-close-btn {
+  background: var(--color-harbor-blue);
+  color: var(--color-cloud-dancer);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+.mmv-close-btn:hover {
+  background: var(--color-pageant-blue);
+}

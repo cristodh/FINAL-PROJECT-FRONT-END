@@ -18,7 +18,8 @@
       "gender": "Masculino",
       "location": "La Capri",
       "startDate": "2025",
-      "CPU": "L1165404962025"
+      "CPU": "L1165404962025",
+      "serialPC": "4bca"
     }
   ],
   "teachers": [
@@ -59,17 +60,24 @@
     }
   ],
   "admins": [],
-  "cpu": [],
+  "cpu": [
+    {
+      "id": "4bca",
+      "serial": "12032",
+      "brand": "Mitsubishi",
+      "assigned": true
+    }
+  ],
   "cpurequests": [
     {
-      "id": "1144",
+      "id": "1fe5",
       "Name": "Christopher Delgado Hidalgo",
       "studentID": "116540496",
       "email": "cris2314",
       "location": "La Capri",
       "CPU": "L1165404962025",
-      "startDate": "2025-09-30",
-      "endDate": "2025-10-01",
+      "startDate": "2025-10-01",
+      "endDate": "2025-10-02",
       "termsAccepted": true,
       "requestState": "pendingForAprv"
     }

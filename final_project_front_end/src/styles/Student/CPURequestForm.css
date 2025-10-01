@@ -94,3 +94,51 @@
   background-color: #8A817C;
   transform: scale(0.98);
 }
+
+/* Fondo con blur */
+.cpu-form-bg {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: url("../../images/Student/FormBackground.png") center center/cover no-repeat;
+  overflow: hidden;
+}
+
+.cpu-form-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(10px);
+  z-index: 0;
+}
+
+.cpu-form-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Botón volver al inicio */
+.btn-volver-inicio {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #00656E;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-volver-inicio:hover {
+  background-color: #1F2C43;
+  transform: scale(1.02);
+}
+
+.btn-volver-inicio:active {
+  background-color: #8A817C;
+  transform: scale(0.98);
+}

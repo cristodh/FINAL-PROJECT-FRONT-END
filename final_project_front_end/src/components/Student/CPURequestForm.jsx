@@ -2,11 +2,14 @@ import { useState } from "react";
 import React from 'react';
 import Tooltip from "@mui/material/Tooltip";
 import PdfModal from "../../components/Student/ModalPDFTerms";
+import HeaderStudent from "./HeaderStudent";
 import "../../styles/Student/CPURequestForm.css";
 import Toastify from 'toastify-js';
 import { postData } from "../../services/fetchs";
+import { useNavigate } from "react-router-dom";
 
 function CPURequestForm() {
+  const navigate = useNavigate()
   const [infoStudent, setInfoStudent] = useState(
     JSON.parse(localStorage.getItem('estudianteRegistrado'))
   );
@@ -23,6 +26,8 @@ function CPURequestForm() {
     endDate: "",
     termsAccepted: false,
   });
+
+  const [attachedImage, setAttachedImage] = useState(null);
 
   async function cpuForm() {
     if (cpuRequest.startDate.trim() === "" ||
@@ -61,14 +66,30 @@ function CPURequestForm() {
         console.error(error);
       }
       
+      Toastify({
+        text: "Formulario enviado con éxito",
+        duration: 1500,
+        newWindow: true,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "center", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "linear-gradient(to right, #00b09b, #96c93d)",
+        },
+        onClick: function () { } // Callback after click
+      }).showToast()
+      setTimeout(() => {
+        navigate("/student/home")
+      }, 1500);
       
   }
   return (
-    <div>
+    <div className="cpu-form-bg">
+      <HeaderStudent />
       <form>
         <div className="contenedorGeneral">
           <h2>Formulario de Solicitud de Permiso</h2>
-
           <div className="infoPersonal">
             <label>Nombre completo: </label>
             <input type="text"
@@ -118,6 +139,10 @@ function CPURequestForm() {
             />
             <br />
 
+            <label>Adjuntar imagen (opcional):</label>
+            <input type="file" accept="image/*" onChange={e => setAttachedImage(e.target.files[0])} />
+            <br />
+
             <Tooltip title="Click para ver el documento" placement="right">
               <p
                 className="linkPdf"
@@ -135,10 +160,10 @@ function CPURequestForm() {
             </div>
 
             <button type="button" onClick={() => { cpuForm() }}>Enviar</button>
+            <button type="button" className="btn-volver-inicio" onClick={() => navigate('/student/home')}>Volver a inicio</button>
           </div>
         </div>
       </form>
-
       {/* Modal PDF */}
       <PdfModal
         pdfUrl="../src/docs/Terminos_y_Condiciones_Equipos_Legal.pdf"
