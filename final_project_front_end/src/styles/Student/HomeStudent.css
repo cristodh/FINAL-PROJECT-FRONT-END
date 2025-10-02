@@ -51,29 +51,26 @@ body {
   cursor: pointer;
 }
 
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 1.5rem;
-  font-size: 0.95rem;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #00bfff;
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-link {
-  color: #00656E;
+  color: var(--color-harbor-blue);
   font-weight: bold;
   text-decoration: none;
-  margin-left: 1.5rem;
   font-size: 0.95rem;
-  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #1F2C43;
+  color: var(--color-cloud-dancer);
+  background-color: var(--color-pageant-blue);
+  transform: translateY(-1px);
 }
 
 /* ==== SIDEBAR ==== */
