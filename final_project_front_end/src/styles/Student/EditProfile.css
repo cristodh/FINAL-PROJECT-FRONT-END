@@ -42,7 +42,7 @@
   position: relative;
 }
 
-.back-btn {
+.profile-back-btn {
   position: absolute;
   top: 1.5rem;
   left: 2rem;
@@ -56,7 +56,7 @@
   transition: all 0.3s ease;
 }
 
-.back-btn:hover {
+.profile-back-btn:hover {
   background: rgba(0,123,255,0.15);
   transform: translateX(-3px);
 }
@@ -322,7 +322,7 @@
     padding: 1.5rem 1rem;
   }
   
-  .back-btn {
+  .profile-back-btn {
     position: static;
     margin-bottom: 1rem;
   }

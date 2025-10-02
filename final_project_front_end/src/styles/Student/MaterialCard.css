@@ -185,6 +185,11 @@
   gap: 0.8rem;
 }
 
+/* Margen extra cuando hay course-indicator */
+.material-card.with-course-indicator .material-actions {
+  margin-bottom: 2.5rem;
+}
+
 .preview-btn,
 .download-btn {
   flex: 1;
@@ -226,7 +231,7 @@
 /* Indicador de curso */
 .course-indicator {
   position: absolute;
-  top: 1rem;
+  bottom: 1rem;
   right: 1rem;
   background: rgba(0,123,255,0.1);
   color: var(--color-harbor-blue);
@@ -236,6 +241,7 @@
   font-weight: 600;
   border: 1px solid rgba(0,123,255,0.2);
   backdrop-filter: blur(10px);
+  z-index: 2;
 }
 
 /* Estados especiales */

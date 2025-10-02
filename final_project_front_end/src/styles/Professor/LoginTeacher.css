@@ -1,20 +1,20 @@
-.columns{
+.professor-columns{
     display: grid;
     grid-template-columns: 4fr 4fr;
 }
 
-.rightColumn{
+.professor-rightColumn{
     display: grid;
     text-align: center;
     align-items: center;
 }
 
-.leftColumn{
+.professor-leftColumn{
     display: flex;
     height: 100vh;
 }
 
-.background{
+.professor-background{
     background-image: url('../../images/Professor/LoginBackground2.png');
     background-size: cover;   
     background-position: center;

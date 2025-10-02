@@ -5,11 +5,11 @@ import TeacherLoginBackgroud from '../../components/Professor/TeacherLoginBackgr
 
 function LoginProfessor() {
   return (
-    <div className='columns'>
-      <div className='leftColumn'>
+    <div className='professor-columns'>
+      <div className='professor-leftColumn'>
         <TeacherLoginBackgroud />
       </div>
-      <div className='rightColumn'>
+      <div className='professor-rightColumn'>
         <TeacherLoginForm/>
       </div>
     </div>

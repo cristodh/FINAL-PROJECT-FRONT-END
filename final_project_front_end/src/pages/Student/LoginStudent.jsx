@@ -3,11 +3,11 @@ import StudentLoginBackgroud from '../../components/Student/StudentLoginBackgrou
 import LoginForm from '../../components/Student/LoginForm'
 function LoginStudent() {
   return (
-    <div className='columns'>
-      <div className='leftColumn'>
+    <div className='student-columns'>
+      <div className='student-leftColumn'>
         <LoginForm/>
       </div>
-      <div className='rightColumn'>
+      <div className='student-rightColumn'>
         <StudentLoginBackgroud />
       </div>
     </div>

@@ -175,7 +175,7 @@ const EditProfile = () => {
         {/* Header */}
         <div className="profile-header">
           <button 
-            className="back-btn"
+            className="profile-back-btn"
             onClick={() => navigate('/student/home')}
           >
             ← Volver al Inicio

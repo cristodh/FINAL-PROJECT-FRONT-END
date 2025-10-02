@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getData } from '../../services/fetchs.js';
 import MaterialCard from '../../components/Student/MaterialCard.jsx';
 import MaterialUpload from '../../components/Student/MaterialUpload.jsx';
+import HeaderStudent from '../../components/Student/HeaderStudent.jsx';
 import '../../styles/Student/StudentMaterials.css';
 
 const StudentMaterials = () => {
@@ -82,8 +83,11 @@ const StudentMaterials = () => {
 
   return (
     <div className="materials-container">
+      {/* Global student header */}
+      <HeaderStudent />
+
       {/* Header */}
-      <div className="materials-header">
+      <div className="materials-header materials-page-header">
         <h1>📚 Materiales de Estudio</h1>
         <p>Accede a documentos del profesor, trabajos ejemplares y gestiona tus propias subidas</p>
         

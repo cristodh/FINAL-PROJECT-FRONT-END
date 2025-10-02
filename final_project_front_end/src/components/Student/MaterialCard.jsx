@@ -56,7 +56,7 @@ const MaterialCard = ({ material, onUpdate }) => {
 
   return (
     <>
-      <div className="material-card">
+      <div className={`material-card ${material.courseId ? 'with-course-indicator' : ''}`}>
         {/* Header con icono y categoría */}
         <div className="material-header">
           <div className="file-info">

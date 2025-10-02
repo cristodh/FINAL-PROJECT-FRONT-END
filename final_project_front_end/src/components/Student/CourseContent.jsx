@@ -112,7 +112,7 @@ function CourseContent({ course, onBack }) {
   return (
     <div className="course-content">
       <div className="course-header">
-        <button className="back-btn" onClick={onBack}>
+        <button className="course-back-btn" onClick={onBack}>
           ← Volver a Cursos
         </button>
         

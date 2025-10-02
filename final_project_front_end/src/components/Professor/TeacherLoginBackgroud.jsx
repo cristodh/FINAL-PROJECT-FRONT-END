@@ -3,7 +3,7 @@ import '../../styles/Professor/LoginTeacher.css'
 
 function TeacherLoginBackgroud() {
   return (
-    <div className="background"></div>
+    <div className="professor-background"></div>
   )
 }
 

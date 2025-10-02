@@ -16,7 +16,7 @@
   margin-bottom: 2rem;
 }
 
-.back-btn {
+.course-back-btn {
   background: rgba(255,255,255,0.3);
   border: 1px solid rgba(255,255,255,0.4);
   color: var(--color-neon-navy);
@@ -29,7 +29,7 @@
   font-size: 1rem;
 }
 
-.back-btn:hover {
+.course-back-btn:hover {
   background: rgba(255,255,255,0.5);
   transform: translateY(-1px);
 }
