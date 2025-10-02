@@ -81,5 +81,230 @@
       "termsAccepted": true,
       "requestState": "pendingForAprv"
     }
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "name": "Desarrollo Web Frontend",
+      "description": "Aprende HTML, CSS, JavaScript y React para crear aplicaciones web modernas",
+      "startDate": "2025-01-15",
+      "endDate": "2025-06-30",
+      "image": "https://via.placeholder.com/300x200/4A90E2/FFFFFF?text=Frontend+Dev",
+      "professorId": "90d3",
+      "professorName": "Prof. Ana García",
+      "students": [
+        "0"
+      ],
+      "createdAt": "2025-01-10",
+      "status": "active"
+    },
+    {
+      "id": "2",
+      "name": "Base de Datos",
+      "description": "Fundamentos de bases de datos relacionales y SQL",
+      "startDate": "2025-02-01",
+      "endDate": "2025-07-15",
+      "image": "https://via.placeholder.com/300x200/50C878/FFFFFF?text=Database",
+      "professorId": "9410",
+      "professorName": "Prof. Carlos López",
+      "students": [
+        "0"
+      ],
+      "createdAt": "2025-01-25",
+      "status": "active"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "1",
+      "courseId": "1",
+      "title": "Landing Page Personal",
+      "description": "Crear una página web personal usando HTML y CSS",
+      "dueDate": "2025-10-15",
+      "createdDate": "2025-10-01",
+      "githubRequired": true,
+      "maxScore": 100,
+      "instructions": "Crear una página web personal que incluya: información personal, portafolio, contacto. Usar HTML5 y CSS3.",
+      "createdBy": "90d3"
+    },
+    {
+      "id": "2",
+      "courseId": "1",
+      "title": "App de Lista de Tareas",
+      "description": "Desarrollar una aplicación de tareas con React",
+      "dueDate": "2025-10-30",
+      "createdDate": "2025-10-10",
+      "githubRequired": true,
+      "maxScore": 100,
+      "instructions": "Crear una aplicación completa de tareas usando React. Debe incluir: agregar, eliminar, marcar como completadas.",
+      "createdBy": "90d3"
+    },
+    {
+      "id": "3",
+      "courseId": "2",
+      "title": "Diseño de ERD",
+      "description": "Crear un diagrama entidad-relación para un sistema de biblioteca",
+      "dueDate": "2025-10-20",
+      "createdDate": "2025-10-05",
+      "githubRequired": false,
+      "maxScore": 80,
+      "instructions": "Diseñar un ERD completo para un sistema de gestión de biblioteca. Incluir entidades, atributos y relaciones.",
+      "createdBy": "9410"
+    }
+  ],
+  "taskSubmissions": [
+    {
+      "id": "1",
+      "taskId": "2",
+      "studentId": "0",
+      "courseId": "1",
+      "githubLink": "https://github.com/estudiante/todo-app",
+      "comments": "Implementé todas las funcionalidades básicas y agregué almacenamiento local.",
+      "submittedDate": "2025-10-25",
+      "status": "entregada",
+      "score": null,
+      "professorFeedback": "Excelente trabajo, muy buena implementación de hooks."
+    }
+  ],
+  "recordings": [
+    {
+      "id": "1",
+      "courseId": "1",
+      "title": "Introducción a React",
+      "description": "Conceptos básicos de React, componentes y JSX",
+      "date": "2025-10-01",
+      "driveLink": "https://drive.google.com/file/d/example1",
+      "duration": "90 minutos",
+      "professorId": "90d3"
+    },
+    {
+      "id": "2",
+      "courseId": "1",
+      "title": "Componentes y Props",
+      "description": "Cómo crear y usar componentes, paso de props",
+      "date": "2025-10-03",
+      "driveLink": "https://drive.google.com/file/d/example2",
+      "duration": "75 minutos",
+      "professorId": "90d3"
+    },
+    {
+      "id": "3",
+      "courseId": "2",
+      "title": "Introducción a SQL",
+      "description": "Comandos básicos de SQL y consultas",
+      "date": "2025-10-02",
+      "driveLink": "https://drive.google.com/file/d/example3",
+      "duration": "85 minutos",
+      "professorId": "9410"
+    }
+  ],
+  "posts": [
+    {
+      "id": "c56c",
+      "title": "hola",
+      "description": "gol",
+      "topic": "fe",
+      "userId": "0",
+      "date": "2025-10-02T09:47:46.220Z",
+      "userName": "Christopher Delgado Hidalgo"
+    }
+  ],
+  "materials": [
+    {
+      "id": "mat001",
+      "title": "Fundamentos de Programación - Guía de Estudio",
+      "description": "Guía completa sobre conceptos básicos de programación, incluyendo variables, funciones y estructuras de control.",
+      "fileName": "fundamentos-programacion-guia.pdf",
+      "fileType": "pdf",
+      "fileSize": "2.5 MB",
+      "category": "Documentos del Profesor",
+      "courseId": "curso001",
+      "uploadedBy": "90d3",
+      "uploaderName": "Prof. María González",
+      "uploadDate": "2024-01-15T08:30:00.000Z",
+      "tags": ["programación", "fundamentos", "guía"],
+      "downloadCount": 45,
+      "isPublic": true
+    },
+    {
+      "id": "mat002",
+      "title": "Examen Final Resuelto - Base de Datos",
+      "description": "Ejemplo de examen final resuelto con explicaciones detalladas para cada pregunta.",
+      "fileName": "examen-bd-resuelto.pdf",
+      "fileType": "pdf",
+      "fileSize": "1.8 MB",
+      "category": "Trabajos Ejemplares",
+      "courseId": "curso002",
+      "uploadedBy": "0",
+      "uploaderName": "Christopher Delgado Hidalgo",
+      "uploadDate": "2024-01-20T14:15:00.000Z",
+      "tags": ["examen", "base de datos", "sql"],
+      "downloadCount": 23,
+      "isPublic": true
+    },
+    {
+      "id": "mat003",
+      "title": "Proyecto Final - Sistema de Inventario",
+      "description": "Código fuente completo del proyecto final, implementado en Java con base de datos MySQL.",
+      "fileName": "proyecto-inventario.zip",
+      "fileType": "zip",
+      "fileSize": "5.2 MB",
+      "category": "Mis Subidas",
+      "courseId": "curso001",
+      "uploadedBy": "0",
+      "uploaderName": "Christopher Delgado Hidalgo",
+      "uploadDate": "2024-02-01T16:45:00.000Z",
+      "tags": ["java", "proyecto", "mysql", "inventario"],
+      "downloadCount": 12,
+      "isPublic": false
+    },
+    {
+      "id": "mat004",
+      "title": "Tutorial - Configuración de Entorno de Desarrollo",
+      "description": "Video tutorial paso a paso para configurar el entorno de desarrollo con VS Code y extensiones necesarias.",
+      "fileName": "setup-dev-environment.mp4",
+      "fileType": "video",
+      "fileSize": "45.3 MB",
+      "category": "Documentos del Profesor",
+      "courseId": "curso001",
+      "uploadedBy": "90d3",
+      "uploaderName": "Prof. María González",
+      "uploadDate": "2024-01-10T10:00:00.000Z",
+      "tags": ["tutorial", "configuración", "vscode"],
+      "downloadCount": 67,
+      "isPublic": true
+    },
+    {
+      "id": "mat005",
+      "title": "Ensayo - Algoritmos de Ordenamiento",
+      "description": "Ensayo académico sobre la comparación de diferentes algoritmos de ordenamiento y su complejidad temporal.",
+      "fileName": "ensayo-algoritmos-ordenamiento.docx",
+      "fileType": "docx",
+      "fileSize": "890 KB",
+      "category": "Trabajos Ejemplares",
+      "courseId": "curso003",
+      "uploadedBy": "0",
+      "uploaderName": "Christopher Delgado Hidalgo",
+      "uploadDate": "2024-01-25T11:30:00.000Z",
+      "tags": ["algoritmos", "ordenamiento", "ensayo"],
+      "downloadCount": 18,
+      "isPublic": true
+    },
+    {
+      "id": "mat006",
+      "title": "Presentación - Metodologías Ágiles",
+      "description": "Presentación sobre Scrum, Kanban y otras metodologías ágiles de desarrollo de software.",
+      "fileName": "metodologias-agiles.pptx",
+      "fileType": "pptx",
+      "fileSize": "3.1 MB",
+      "category": "Mis Subidas",
+      "courseId": "curso002",
+      "uploadedBy": "0",
+      "uploaderName": "Christopher Delgado Hidalgo",
+      "uploadDate": "2024-02-05T09:20:00.000Z",
+      "tags": ["scrum", "kanban", "metodologías", "ágiles"],
+      "downloadCount": 8,
+      "isPublic": false
+    }
   ]
 }

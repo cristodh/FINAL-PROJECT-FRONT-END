@@ -6,8 +6,17 @@ import TopPublicaciones from "../../components/Student/TopPost";
 import HeaderStudent from "../../components/Student/HeaderStudent";
 import FooterStudent from "../../components/Student/FooterStudent";
 import "../../styles/Student/HomeStudent.css";
+import ModalPost from "../../components/Student/ModalPost";
 
 function HomeStudent() {
+const [isOpen, setIsOpen] = React.useState(false);
+  function abrirModal() {
+    setIsOpen(true);
+  }
+  function cerrarModal() {
+    setIsOpen(false);
+  }
+
   const [datosEstudiante] = useState(
     JSON.parse(localStorage.getItem("estudianteRegistrado")) || {}
   );
@@ -30,12 +39,15 @@ function HomeStudent() {
 
           <section className="perfil-card">
             <Perfil
+            cpu={datosEstudiante.CPU}
               nombre={`${datosEstudiante.name || ""} ${
                 datosEstudiante.lastName || ""
               }`}
               fechaRegistro={datosEstudiante.startDate}
-            />
+              />
           </section>
+              <button className="mt-3 w-50 btn btn-primary" onClick={abrirModal}>Añadir Publicación</button>
+    {isOpen && (<ModalPost open={isOpen} onClose={cerrarModal} />)}
         </div>
 
         <section className="posts-card">

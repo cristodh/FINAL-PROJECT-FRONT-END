@@ -7,6 +7,9 @@ import CreateModifyAdmin from "../pages/Admin/CreateModifyAdmin";
 import AdminLogin from "../pages/Admin/AdminLogin";
 import CPUForm from "../pages/Student/CPUForm";
 import HomeStudent from "../pages/Student/HomeStudent";
+import StudentCourses from "../pages/Student/StudentCourses";
+import StudentMaterials from "../pages/Student/StudentMaterials";
+import EditProfile from "../pages/Student/EditProfile";
 import PrivateRoute from "./PrivateRoute";
 
 
@@ -22,6 +25,9 @@ function Routing() {
                 <Route path="/AdminLogin" element={<AdminLogin/>}/>
                 <Route path="/student/CPURequestForm" element={<CPUForm/>}/>
                 <Route path="/student/home" element={<PrivateRoute children={<HomeStudent/>}/>}/>
+                <Route path="/student/courses" element={<PrivateRoute children={<StudentCourses/>}/>}/>
+                <Route path="/student/materials" element={<PrivateRoute children={<StudentMaterials/>}/>}/>
+                <Route path="/student/edit-profile" element={<PrivateRoute children={<EditProfile/>}/>}/>
             </Routes>
         </Router>
     )

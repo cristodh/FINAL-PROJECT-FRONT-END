@@ -1,0 +1,229 @@
+/* Modal de subida de tareas */
+.task-upload-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(19,25,54,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+}
+
+.task-upload-modal {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  border: 1.5px solid rgba(255,255,255,0.5);
+  box-shadow: 0 20px 60px rgba(19,25,54,0.3);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+}
+
+.modal-header h3 {
+  color: var(--color-neon-navy);
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: var(--color-pageant-blue);
+  cursor: pointer;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255,0,0,0.1);
+  color: #dc2626;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.task-info {
+  background: rgba(255,255,255,0.2);
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.task-info h4 {
+  color: var(--color-neon-navy);
+  margin: 0 0 0.8rem 0;
+  font-size: 1.2rem;
+}
+
+.task-description {
+  color: var(--color-pageant-blue);
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.due-date {
+  color: var(--color-harbor-blue);
+  font-weight: 500;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: bold;
+  color: var(--color-neon-navy);
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  border-radius: 10px;
+  background: rgba(255,255,255,0.3);
+  color: var(--color-neon-navy);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-harbor-blue);
+  background: rgba(255,255,255,0.5);
+  box-shadow: 0 0 0 3px rgba(0,101,110,0.1);
+}
+
+.help-text {
+  color: var(--color-pageant-blue);
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  font-style: italic;
+}
+
+.github-instructions {
+  background: rgba(0,101,110,0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--color-harbor-blue);
+}
+
+.github-instructions h5 {
+  color: var(--color-harbor-blue);
+  margin: 0 0 0.8rem 0;
+  font-size: 1rem;
+}
+
+.github-instructions ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--color-pageant-blue);
+}
+
+.github-instructions li {
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.1);
+}
+
+.cancel-btn,
+.submit-btn {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.cancel-btn {
+  background: rgba(255,255,255,0.3);
+  color: var(--color-pageant-blue);
+  border: 1.5px solid rgba(255,255,255,0.4);
+}
+
+.cancel-btn:hover {
+  background: rgba(255,255,255,0.5);
+  transform: translateY(-1px);
+}
+
+.submit-btn {
+  background: var(--color-harbor-blue);
+  color: white;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--color-pageant-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,101,110,0.3);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .task-upload-overlay {
+    padding: 0.5rem;
+  }
+  
+  .modal-footer {
+    flex-direction: column;
+  }
+  
+  .cancel-btn,
+  .submit-btn {
+    width: 100%;
+  }
+}

@@ -33,8 +33,8 @@ body {
 /* ==== HEADER ==== */
 .header {
   grid-column: 1 / -1;
-  background: var(--color-cloud-dancer);
-  color: var(--color-neon-navy);
+  background: var(--color-neon-navy);
+  color: var(--color-cloud-dancer);
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -58,7 +58,7 @@ body {
 }
 
 .nav-link {
-  color: var(--color-harbor-blue);
+  color: var(--color-cloud-dancer);
   font-weight: bold;
   text-decoration: none;
   font-size: 0.95rem;

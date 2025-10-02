@@ -1,0 +1,217 @@
+/* Lista de tareas */
+.task-list {
+  margin: 2rem 0;
+}
+
+.task-list h3 {
+  color: var(--color-neon-navy);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.no-tasks {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  box-shadow: 0 8px 32px rgba(19,25,54,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--color-pageant-blue);
+}
+
+.tasks-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.task-card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  box-shadow: 0 8px 32px rgba(19,25,54,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.task-card.clickable {
+  cursor: pointer;
+}
+
+.task-card.clickable:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(19,25,54,0.2);
+}
+
+.task-card.overdue {
+  border-color: rgba(255, 0, 0, 0.5);
+  background: rgba(255,200,200,0.15);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.task-title {
+  color: var(--color-neon-navy);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0;
+  flex: 1;
+}
+
+.status-badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.status-submitted {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.status-graded {
+  background: #d1fae5;
+  color: #065f46;
+}
+
+.task-description {
+  color: var(--color-pageant-blue);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.task-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.task-due-date .label {
+  font-weight: bold;
+  color: var(--color-neon-navy);
+  margin-right: 0.5rem;
+}
+
+.date {
+  color: var(--color-pageant-blue);
+}
+
+.overdue-date {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.overdue-text {
+  font-size: 0.8rem;
+  background: #fef2f2;
+  color: #dc2626;
+  padding: 0.2rem 0.5rem;
+  border-radius: 10px;
+  margin-left: 0.5rem;
+}
+
+.github-required {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-harbor-blue);
+  font-weight: 500;
+}
+
+.github-icon {
+  font-size: 1.1rem;
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.github-link a {
+  color: var(--color-harbor-blue);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border-radius: 8px;
+  background: rgba(0,101,110,0.1);
+  border: 1px solid rgba(0,101,110,0.2);
+  transition: all 0.3s ease;
+}
+
+.github-link a:hover {
+  background: var(--color-harbor-blue);
+  color: white;
+}
+
+.professor-comments {
+  background: rgba(255,255,255,0.3);
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 4px solid var(--color-harbor-blue);
+}
+
+.professor-comments .label {
+  font-weight: bold;
+  color: var(--color-neon-navy);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.comments-text {
+  color: var(--color-pageant-blue);
+  margin: 0;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.task-actions {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.submit-btn {
+  background: var(--color-harbor-blue);
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.submit-btn:hover {
+  background: var(--color-pageant-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,101,110,0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .task-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .task-details {
+    font-size: 0.9rem;
+  }
+}

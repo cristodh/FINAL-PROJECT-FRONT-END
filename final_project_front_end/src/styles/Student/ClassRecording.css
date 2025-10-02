@@ -1,0 +1,228 @@
+/* Grabaciones de clase */
+.class-recordings {
+  margin: 2rem 0;
+}
+
+.class-recordings h3 {
+  color: var(--color-neon-navy);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.no-recordings {
+  text-align: center;
+  padding: 3rem;
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  box-shadow: 0 8px 32px rgba(19,25,54,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  color: var(--color-pageant-blue);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.no-recordings p {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-neon-navy);
+}
+
+.no-recordings small {
+  color: var(--color-pageant-blue);
+}
+
+.recordings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.recording-card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  box-shadow: 0 8px 32px rgba(19,25,54,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.recording-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(19,25,54,0.2);
+}
+
+.recording-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.recording-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--color-harbor-blue), var(--color-pageant-blue));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.recording-info h4 {
+  color: var(--color-neon-navy);
+  margin: 0 0 0.3rem 0;
+  font-size: 1.1rem;
+}
+
+.recording-date {
+  color: var(--color-pageant-blue);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.recording-preview {
+  background: rgba(255,255,255,0.2);
+  border-radius: 12px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.preview-placeholder {
+  text-align: center;
+  color: var(--color-pageant-blue);
+}
+
+.play-icon {
+  width: 60px;
+  height: 60px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  font-size: 1.5rem;
+  color: var(--color-harbor-blue);
+  border: 2px solid rgba(255,255,255,0.4);
+}
+
+.recording-actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.watch-btn,
+.download-btn {
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.watch-btn {
+  background: var(--color-harbor-blue);
+  color: white;
+}
+
+.watch-btn:hover {
+  background: var(--color-pageant-blue);
+  transform: translateY(-1px);
+}
+
+.download-btn {
+  background: rgba(255,255,255,0.3);
+  color: var(--color-neon-navy);
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.download-btn:hover {
+  background: rgba(255,255,255,0.5);
+  transform: translateY(-1px);
+}
+
+.recording-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.detail-icon {
+  font-size: 1rem;
+}
+
+.detail-text {
+  color: var(--color-pageant-blue);
+}
+
+.recordings-info {
+  margin-top: 2rem;
+}
+
+.info-card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  box-shadow: 0 8px 32px rgba(19,25,54,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 1.5rem;
+}
+
+.info-card h4 {
+  color: var(--color-neon-navy);
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.info-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--color-pageant-blue);
+}
+
+.info-card li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .recordings-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .recording-actions {
+    flex-direction: column;
+  }
+  
+  .watch-btn,
+  .download-btn {
+    width: 100%;
+  }
+}

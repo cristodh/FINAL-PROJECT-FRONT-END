@@ -6,20 +6,20 @@ function FooterStudent() {
   const [openModal, setOpenModal] = useState(false);
   return (
     <footer className="footer">
-      <p>
-        © {new Date().getFullYear()} OneConnect - Creado para estudiantes con
-        ❤️
-      </p>
       <button
         className="btn-mision-vision"
         onClick={() => setOpenModal(true)}
-      >
+        >
         Misión y Visión
       </button>
       <ModalMissionVision
         open={openModal}
         onClose={() => setOpenModal(false)}
-      />
+        />
+        <p>
+          © {new Date().getFullYear()} OneConnect - Creado para estudiantes con
+          ❤️
+        </p>
     </footer>
   );
 }

@@ -2,7 +2,9 @@ import React from "react";
 import "../../styles/Student/ColorsStudent.css"
 import "../../styles/Student/SmallProfile.css";
 
+
 function SmallProfile({fotoPerfil,nombre,fechaRegistro,cpu}) {
+  
   return (
     <div>
       <p className="perfilTitle"><strong> Perfil de Usuario</strong></p>
@@ -18,6 +20,7 @@ function SmallProfile({fotoPerfil,nombre,fechaRegistro,cpu}) {
       </div>
       
     </section>
+    
     </div>
   );
 }

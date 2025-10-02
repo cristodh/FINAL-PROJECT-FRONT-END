@@ -21,7 +21,12 @@ function SideBarHomeStu() {
         </li>
         <li>
           <Tooltip title="Mis Cursos" placement="right">
-          <img src="../src/images/Student/StudyICON.png" alt="StudyICON" />
+          <img 
+            src="../src/images/Student/StudyICON.png" 
+            alt="StudyICON" 
+            onClick={() => navigate('/student/courses')}
+            className="sidebar-icon"
+          />
           </Tooltip>
         </li>
         <li>
@@ -31,15 +36,24 @@ function SideBarHomeStu() {
         </li>
         <li>
           <Tooltip title="Material de Estudio" placement="right">
-          <img src="../src/images/Student/MaterialsICON.png" alt="MaterialsICON" />
+          <img 
+            src="../src/images/Student/MaterialsICON.png" 
+            alt="MaterialsICON" 
+            onClick={() => navigate('/student/materials')}
+            className="sidebar-icon"
+          />
           </Tooltip>
         </li>
       </ul>
       <div className="sidebar-footer">
 
-        <button>
+        <button onClick={() => navigate('/student/edit-profile')}>
           <Tooltip title="Editar Perfil" placement="right">
-            <img src="../src/images/Student/ProfileICON.png" alt="ProfileICON" />
+            <img 
+              src="../src/images/Student/ProfileICON.png" 
+              alt="ProfileICON" 
+              className="sidebar-icon"
+            />
           </Tooltip>
         </button>
         <button onClick={() => {

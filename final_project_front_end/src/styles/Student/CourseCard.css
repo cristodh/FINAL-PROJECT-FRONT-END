@@ -1,0 +1,149 @@
+/* Tarjetas de curso */
+.course-card {
+  background: rgba(255,255,255,0.18);
+  border-radius: 16px;
+  border: 1.5px solid rgba(255,255,255,0.35);
+  box-shadow: 0 8px 32px rgba(19,25,54,0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: fit-content;
+}
+
+.course-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(19,25,54,0.2);
+}
+
+.course-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.course-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover .course-image img {
+  transform: scale(1.05);
+}
+
+.course-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(19,25,54,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.course-card:hover .course-overlay {
+  opacity: 1;
+}
+
+.view-course {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  border: 2px solid white;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.view-course:hover {
+  background: white;
+  color: var(--color-neon-navy);
+}
+
+.course-info {
+  padding: 1.5rem;
+}
+
+.course-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--color-neon-navy);
+  margin-bottom: 0.5rem;
+}
+
+.course-professor {
+  color: var(--color-harbor-blue);
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.course-description {
+  color: var(--color-pageant-blue);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.course-dates {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: rgba(255,255,255,0.3);
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.date-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-label {
+  font-size: 0.8rem;
+  color: var(--color-pageant-blue);
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.date-value {
+  font-size: 0.85rem;
+  color: var(--color-neon-navy);
+  font-weight: 500;
+}
+
+.course-stats {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.3);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-harbor-blue);
+  margin-bottom: 0.2rem;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: var(--color-pageant-blue);
+  font-weight: 500;
+}
