@@ -17,11 +17,11 @@ function HeaderStudent() {
         OneConnect
       </h1>
       <nav className="nav-links">
-        <a href="/home/student" className="nav-link">
+        <a href="/student/home" className="nav-link">
           Inicio
         </a>
-        <a href="/perfil" className="nav-link">
-          Mi Perfil
+        <a href="/student/edit-profile" className="nav-link">
+          Editar Perfil
         </a>
         <a href="#" className="nav-link" onClick={handleLogout}>
           Log Out

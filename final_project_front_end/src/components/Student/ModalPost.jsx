@@ -1,17 +1,18 @@
 import React, { useState } from "react";
 import { postData } from "../../services/fetchs";
-import "../../styles/Student/TaskUpload.css";
+import "../../styles/Student/ModalPost.css";
 
 function ModalPost({ open, onClose }){
   if (!open) return null;
+  
   const [tituloPublicacion, setTituloPublicacion] = useState('');
   const [descripcionPublicacion, setDescripcionPublicacion] = useState('');
   const [topicoPublicacion, setTopicoPublicacion] = useState('');
-  const [usuario,setUsuario] = useState(
+  const [usuario, setUsuario] = useState(
     JSON.parse(localStorage.getItem("estudianteRegistrado")) || {}
   );
 
-  async function handleSubmit(e) {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
       title: tituloPublicacion,
@@ -21,55 +22,74 @@ function ModalPost({ open, onClose }){
       date: new Date().toISOString(),
       userName: usuario.name + " " + usuario.lastName
     };
-    await postData(data,"posts");
+    await postData(data, "posts");
     onClose();
-  }
-
+  };
 
   const formatDate = (dateString) => {
     const options = { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' };
     return new Date(dateString).toLocaleDateString('es-ES', options);
   };
 
+  const isFormValid = tituloPublicacion.trim() && descripcionPublicacion.trim() && topicoPublicacion;
+
   return (
-    <div className="task-upload-overlay" onClick={onClose}>
-      <div className="task-upload-modal" onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
-          <h3></h3>
+    <div className="modal-post-overlay" onClick={onClose}>
+      <div className="modal-post-container" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-post-header">
+          <h2 className="modal-post-title">Nueva Publicación</h2>
           <button className="close-btn" onClick={onClose}>×</button>
-          <input type="text" placeholder="Titulo de publicacion" value={tituloPublicacion} onChange={(e) => setTituloPublicacion(e.target.value)} />
-          <input type="text" placeholder="Descripcion de publicacion" value={descripcionPublicacion} onChange={(e) => setDescripcionPublicacion(e.target.value)} />
-          <select value={topicoPublicacion} onChange={(e) => setTopicoPublicacion(e.target.value)}>
-            <option value="" disabled selected>Topico de la publicación</option>
+          
+          <input 
+            type="text" 
+            className="form-input"
+            placeholder="Título de publicación" 
+            value={tituloPublicacion} 
+            onChange={(e) => setTituloPublicacion(e.target.value)} 
+          />
+          
+          <input 
+            type="text" 
+            className="form-input"
+            placeholder="Descripción de publicación" 
+            value={descripcionPublicacion} 
+            onChange={(e) => setDescripcionPublicacion(e.target.value)} 
+          />
+          
+          <select 
+            className="form-select"
+            value={topicoPublicacion} 
+            onChange={(e) => setTopicoPublicacion(e.target.value)}
+          >
+            <option value="" disabled>Tópico de la publicación</option>
             <option value="fe">Front-End</option>
             <option value="be">Back-End</option>
             <option value="op">Abierto</option>
           </select>
         </div>
 
-        <div className="modal-body">
-          <div>
-            <h3>{tituloPublicacion}</h3>
-            <p className="task-description">{descripcionPublicacion}</p>
-            <p className="topic">{topicoPublicacion}</p>
-            <p className="date">{formatDate(new Date())}</p>
+        <div className="modal-post-body">
+          <div className="preview-section">
+            <h3 className="preview-title">{tituloPublicacion || "Vista previa del título"}</h3>
+            <p className="preview-description">{descripcionPublicacion || "Vista previa de la descripción"}</p>
+            {topicoPublicacion && <span className="preview-topic">{topicoPublicacion}</span>}
+            <p className="preview-date">{formatDate(new Date())}</p>
           </div>
         </div>
 
-      </div>
-
-      <div className="modal-footer">
-        <button type="button" className="cancel-btn" onClick={onClose}>
-          Cancelar
-        </button>
-        <button
-          type="submit"
-          className="submit-btn"
-          onClick={handleSubmit}
-          
+        <div className="modal-post-footer">
+          <button type="button" className="btn-cancel" onClick={onClose}>
+            Cancelar
+          </button>
+          <button
+            type="submit"
+            className="btn-submit"
+            onClick={handleSubmit}
+            disabled={!isFormValid}
           >
-        Agregar publicación
-        </button>
+            Agregar Publicación
+          </button>
+        </div>
       </div>
     </div>
   );

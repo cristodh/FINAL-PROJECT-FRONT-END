@@ -29,6 +29,7 @@ function LoginForm() {
     }
     async function verifyStudent() {
         const students = await getData("students");
+        const admins = await getData("admins");
         const newStudentFound = students.find(
             (students) => students.email === emailStudent &&
                 students.tempPassword === passwordStudent);
@@ -38,6 +39,16 @@ function LoginForm() {
                 students.password === passwordStudent);
         console.log(students.id);
 
+        const adminFound = admins.find(
+            (admins) => admins.email === emailStudent &&
+                admins.password === passwordStudent);
+           
+        if (adminFound) {
+            localStorage.setItem('admin', JSON.stringify(adminFound))
+            navigate("/admin/create_modif_admin")
+            return
+        }
+        // const adminRegister = s
         if (newStudentFound) {
             localStorage.setItem('estudianteNuevo', JSON.stringify(newStudentFound))
             navigate("/registerNewStudent")

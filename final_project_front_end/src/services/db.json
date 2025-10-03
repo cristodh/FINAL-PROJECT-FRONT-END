@@ -24,43 +24,18 @@
   ],
   "teachers": [
     {
-      "id": "90d3",
-      "email": "soymaistro@mepxd.com",
-      "tempPassword": "1234"
-   
-    },
-    {
-      "id": "9410",
-      "email": "Gg@gmail.com",
-      "tempPassword": "1234"
-    },
-    {
-      "id": "b0f2",
-      "email": "ds@gmail.com",
-      "tempPassword": "1234"
-    },
-    {
-      "id": "06c7",
-      "email": "12",
-      "tempPassword": "12"
-    },
-    {
-      "id": "50a0",
-      "email": "asdas",
-      "tempPassword": "asdas"
-    },
-    {
-      "id": "6b54",
-      "email": "dfkdlfkd",
-      "tempPassword": "dffdf"
-    },
-    {
-      "id": "1649",
-      "email": "sdsdsd",
-      "tempPassword": "asdsad"
+      "id": "24f3",
+      "email": "profesor@gmail.com",
+      "tempPassword": "123"
     }
   ],
-  "admins": [],
+  "admins": [
+    {
+      "id": 0,
+      "email": "admin",
+      "password": "admin"
+    }
+  ],
   "cpu": [
     {
       "id": "4bca",
@@ -223,7 +198,11 @@
       "uploadedBy": "90d3",
       "uploaderName": "Prof. María González",
       "uploadDate": "2024-01-15T08:30:00.000Z",
-      "tags": ["programación", "fundamentos", "guía"],
+      "tags": [
+        "programación",
+        "fundamentos",
+        "guía"
+      ],
       "downloadCount": 45,
       "isPublic": true
     },
@@ -239,7 +218,11 @@
       "uploadedBy": "0",
       "uploaderName": "Christopher Delgado Hidalgo",
       "uploadDate": "2024-01-20T14:15:00.000Z",
-      "tags": ["examen", "base de datos", "sql"],
+      "tags": [
+        "examen",
+        "base de datos",
+        "sql"
+      ],
       "downloadCount": 23,
       "isPublic": true
     },
@@ -255,7 +238,12 @@
       "uploadedBy": "0",
       "uploaderName": "Christopher Delgado Hidalgo",
       "uploadDate": "2024-02-01T16:45:00.000Z",
-      "tags": ["java", "proyecto", "mysql", "inventario"],
+      "tags": [
+        "java",
+        "proyecto",
+        "mysql",
+        "inventario"
+      ],
       "downloadCount": 12,
       "isPublic": false
     },
@@ -271,7 +259,11 @@
       "uploadedBy": "90d3",
       "uploaderName": "Prof. María González",
       "uploadDate": "2024-01-10T10:00:00.000Z",
-      "tags": ["tutorial", "configuración", "vscode"],
+      "tags": [
+        "tutorial",
+        "configuración",
+        "vscode"
+      ],
       "downloadCount": 67,
       "isPublic": true
     },
@@ -287,7 +279,11 @@
       "uploadedBy": "0",
       "uploaderName": "Christopher Delgado Hidalgo",
       "uploadDate": "2024-01-25T11:30:00.000Z",
-      "tags": ["algoritmos", "ordenamiento", "ensayo"],
+      "tags": [
+        "algoritmos",
+        "ordenamiento",
+        "ensayo"
+      ],
       "downloadCount": 18,
       "isPublic": true
     },
@@ -303,7 +299,12 @@
       "uploadedBy": "0",
       "uploaderName": "Christopher Delgado Hidalgo",
       "uploadDate": "2024-02-05T09:20:00.000Z",
-      "tags": ["scrum", "kanban", "metodologías", "ágiles"],
+      "tags": [
+        "scrum",
+        "kanban",
+        "metodologías",
+        "ágiles"
+      ],
       "downloadCount": 8,
       "isPublic": false
     }

@@ -3,7 +3,7 @@ import TeacherLoginForm from '../../components/Professor/TeacherLoginForm'
 import TeacherLoginBackgroud from '../../components/Professor/TeacherLoginBackgroud'
 import { useNavigate } from 'react-router-dom'
 import { ProfessorDB } from '../../services/ProfessorDB'
-import ProfessorDebugPanel from '../../components/Professor/ProfessorDebugPanel'
+// ProfessorDebugPanel eliminado
 import '../../styles/Professor/ProfessorTheme.css'
 
 function LoginProfessor() {
@@ -43,7 +43,7 @@ function LoginProfessor() {
 
   return (
     <div className='professor-columns'>
-      <ProfessorDebugPanel />
+  {/* ProfessorDebugPanel eliminado */}
       <div className='professor-leftColumn'>
         <TeacherLoginBackgroud />
       </div>

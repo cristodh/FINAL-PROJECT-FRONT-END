@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { ProfessorDB, showSuccessMessage } from '../../services/ProfessorDB'
-import ProfessorDebugPanel from '../../components/Professor/ProfessorDebugPanel'
+// ProfessorDebugPanel eliminado
 import Toastify from 'toastify-js'
 import '../../styles/Professor/ProfessorTheme.css'
 
@@ -108,7 +108,7 @@ function ProfessorRegister() {
 
   return (
     <div className="professor-register-container">
-      <ProfessorDebugPanel />
+  {/* ProfessorDebugPanel eliminado */}
       <div className="professor-register-overlay">
         <form className="professor-register-form" onSubmit={handleRegisterSubmit}>
           <h2 className="professor-register-title">Completar Registro de Profesor</h2>
